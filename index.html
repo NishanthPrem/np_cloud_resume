@@ -5,7 +5,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nishanth Prem - Resume</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com">
+        const apiGatewayUrl = 'https://kdyymm92fc.execute-api.us-west-1.amazonaws.com/$default';
+
+        // Trigger the API Gateway with a POST request when the page loads
+        fetch(apiGatewayUrl, {
+            method: 'POST', // Use POST method
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({}) // Send an empty JSON body as your Lambda function doesn't require data
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log('Visitor count updated:', data);
+        })
+        .catch((error) => {
+            console.error('Error triggering API Gateway:', error);
+        });
+        </script>
 </head>
 
 <body class="bg-gray-100 text-gray-900">
