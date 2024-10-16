@@ -5,25 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nishanth Prem - Resume</title>
-    <script src="https://cdn.tailwindcss.com">
-        const apiGatewayUrl = "https://kdyymm92fc.execute-api.us-west-1.amazonaws.com/";
-
-        // Trigger the API Gateway with a POST request when the page loads
-        fetch(apiGatewayUrl, {
-            method: 'POST', 
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({})
-        })
-        .then(response => response.json())
-        .then(data => {
-            console.log('Visitor count updated:', data);
-        })
-        .catch((error) => {
-            console.error('Error triggering API Gateway:', error);
-        });
-        </script>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body class="bg-gray-100 text-gray-900">
@@ -119,6 +101,26 @@
             </div>
         </div>
     </div>
+
+</script>
+    const apiGatewayUrl = "https://kdyymm92fc.execute-api.us-west-1.amazonaws.com/";
+
+    // Trigger the API Gateway with a POST request when the page loads
+    fetch(apiGatewayUrl, {
+        method: 'POST', 
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({})
+    })
+    .then(response => response.json())
+    .then(data => {
+        console.log('Visitor count updated:', data);
+    })
+    .catch((error) => {
+        console.error('Error triggering API Gateway:', error);
+    });
+</script>
 
 </body>
 
