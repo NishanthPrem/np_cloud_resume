@@ -1,2 +1,5 @@
 CloudResumeChallenge.pdf
 CloudResume Architecture Diagram.png
+.terraform
+*.tfstate
+*.tfstate.backup
