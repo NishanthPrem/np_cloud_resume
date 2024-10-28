@@ -85,3 +85,11 @@ resource "aws_cloudfront_distribution" "resume_cloudfront" {
     minimum_protocol_version       = "TLSv1"
   }
 }
+
+resource "aws_iam_user" "general_user" {
+  name = "nishanth"
+
+  lifecycle {
+    ignore_changes = [tags]
+  }
+}
