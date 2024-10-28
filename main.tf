@@ -26,3 +26,17 @@ resource "aws_apigatewayv2_api" "resume_api" {
     max_age           = 0
   }
 }
+
+resource "aws_lambda_function" "resume_lambda" {
+  function_name = "np-cloud-resume-lambda"
+  handler       = "lambda_function.lambda_handler"
+  runtime       = "python3.12"
+  role          = "arn:aws:iam::026344247838:role/service-role/np-cloud-resume-lambda-role-8ow26ejy"
+  memory_size   = 128
+  timeout       = 3
+  filename      = "function.zip"
+  
+  lifecycle {
+    ignore_changes = [filename]
+  }
+}
