@@ -15,7 +15,7 @@ The Cloud Resume Challenge requires participants to design and deploy a serverle
 - A DynamoDB table to track visitor count
 - An API Gateway to expose a visitor counter API
 - A Lambda function to interact with DynamoDB and handle visitor counting
-- CI/CD pipelines for both frontend and backend updates
+- CI/CD pipelines for frontend updates
 
 My resume website is deployed on an S3 bucket with a CloudFront distribution for optimized delivery. The website also includes a visitor counter that updates dynamically using API Gateway, DynamoDB, and Lambda.
 
