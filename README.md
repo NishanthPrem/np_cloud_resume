@@ -3,7 +3,10 @@
 This project is part of the Cloud Resume Challenge and showcases my skills in cloud engineering and development. The goal of this challenge is to create a personal, interactive resume hosted entirely on the cloud. 
 
 CloudFront link: https://djyh4a4rxtaq4.cloudfront.net/
+
 S3 link: http://np-cloud-resume.s3-website-us-west-1.amazonaws.com/
+
+Front End: https://github.com/NishanthPrem/np_cloud_resume_front
 
 ## Table of Contents
 - [Project Overview](#project-overview)
