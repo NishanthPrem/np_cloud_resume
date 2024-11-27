@@ -8,6 +8,13 @@ resource "aws_s3_bucket" "resume_bucket" {
 
 resource "aws_dynamodb_table" "resume_table" {
   name = "np-cloud-resume-db"
+  billing_mode   = "PROVISIONED"
+  hash_key       = "id"
+
+  attribute {
+    name = "id"
+    type = "S"
+  }
 }
 
 resource "aws_apigatewayv2_api" "resume_api" {
